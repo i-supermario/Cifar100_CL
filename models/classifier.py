@@ -262,7 +262,8 @@ class Classifier(ContinualLearner):
             'pred': predL.item() if predL is not None else 0,
             'pred_r': sum(predL_r).item()/n_replays if (x_ is not None and predL_r[0] is not None) else 0,
             'distil_r': sum(distilL_r).item()/n_replays if (x_ is not None and distilL_r[0] is not None) else 0,
-            'ewc': ewc_loss.item(), 'si_loss': surrogate_loss.item(),
+            'ewc': ewc_loss.item(), 
+            #'si_loss': surrogate_loss.item(),
             'precision': precision if precision is not None else 0.,
         }
 
