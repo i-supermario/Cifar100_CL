@@ -237,9 +237,9 @@ class Classifier(ContinualLearner):
         ##--(3)-- ALLOCATION LOSSES --##
 
         # Add SI-loss (Zenke et al., 2017)
-        surrogate_loss = self.surrogate_loss()
-        if self.si_c>0:
-            loss_total += self.si_c * surrogate_loss
+#         surrogate_loss = self.surrogate_loss()
+#         if self.si_c>0:
+#             loss_total += self.si_c * surrogate_loss
 
         # Add EWC-loss
         ewc_loss = self.ewc_loss()
